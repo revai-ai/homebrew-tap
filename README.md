@@ -11,7 +11,7 @@ Requirements: a Mac with Apple silicon, macOS 14 or later.
 brew install --cask revai-ai/tap/unalyze-connect-staging
 ```
 
-This build is not notarized by Apple yet, so macOS blocks its first launch: open System Settings → Privacy & Security and choose Open Anyway.
+This build is not notarized by Apple yet, so macOS blocks its first launch. In the “Unalyze Connect” Not Opened dialog click Done, not Move to Trash (the default button), then open System Settings → Privacy & Security and choose Open Anyway.
 
 Then open Unalyze Connect and choose Sign in…: Unalyze opens in your browser, where you check the code and allow Unalyze Connect.
 
