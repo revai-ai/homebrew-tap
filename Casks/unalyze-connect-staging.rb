@@ -1,9 +1,9 @@
 cask "unalyze-connect-staging" do
-  version "0.1.1"
-  sha256 "44540c9b8208222bd8660003288be9d6312dcff09c0d06e8d3bf23de9ab1c2b4"
+  version "0.1.7"
+  sha256 "c8d6d2de8a4c4055d0c1109a750b8116f7308f57d536df996a276845730be706"
 
   url "https://connect.base.un-alyze.com/staging/#{version}/unalyze-connect-#{version}-macos-aarch64.app.zip"
-  name "Unalyze Connect"
+  name "Unalyze Connect (staging)"
   desc "Syncs MetaTrader 5 accounts with Unalyze"
   homepage "https://www.un-alyze.com/"
 
@@ -18,15 +18,15 @@ cask "unalyze-connect-staging" do
   depends_on arch: :arm64
   depends_on macos: :sonoma
 
-  app "Unalyze Connect.app"
+  app "Unalyze Connect (staging).app"
 
-  uninstall quit: "com.un-alyze.connect"
+  uninstall quit: "com.un-alyze.connect.staging"
 
   zap trash: [
-    "/Applications/.Unalyze Connect.app.failed",
-    "/Applications/.Unalyze Connect.app.new",
-    "/Applications/.Unalyze Connect.app.old",
-    "~/Library/Application Support/com.un-alyze.connect",
-    "~/Library/LaunchAgents/com.un-alyze.connect.plist",
+    "/Applications/.Unalyze Connect (staging).app.failed",
+    "/Applications/.Unalyze Connect (staging).app.new",
+    "/Applications/.Unalyze Connect (staging).app.old",
+    "~/Library/Application Support/com.un-alyze.connect.staging",
+    "~/Library/LaunchAgents/com.un-alyze.connect.staging.plist",
   ]
 end

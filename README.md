@@ -11,19 +11,19 @@ Requirements: a Mac with Apple silicon, macOS 14 or later.
 brew install --cask revai-ai/tap/unalyze-connect-staging
 ```
 
-This build is not notarized by Apple yet, so macOS blocks its first launch. In the “Unalyze Connect” Not Opened dialog click Done, not Move to Trash (the default button), then open System Settings → Privacy & Security and choose Open Anyway.
+This build is not notarized by Apple yet, so macOS blocks its first launch. In the “Unalyze Connect (staging)” Not Opened dialog click Done, not Move to Trash (the default button), then open System Settings → Privacy & Security and choose Open Anyway.
 
-Then open Unalyze Connect and choose Sign in…: Unalyze opens in your browser, where you check the code and allow Unalyze Connect.
+Then open Unalyze Connect (staging) and choose Sign in…: Unalyze opens in your browser, where you check the code and allow Unalyze Connect.
 
 Unalyze Connect updates itself, so `brew upgrade` leaves it alone.
 
 ## Uninstall
 
-Homebrew leaves the saved sign-in in the Keychain, so after `brew uninstall --zap` run the uninstall script as well. It removes the app with its start at login, saved sign-in and data:
+`brew uninstall --zap` removes the app with its start at login and data. Homebrew leaves the saved sign-in and the accounts' investor passwords in the Keychain, so delete them as well:
 
 ```sh
 brew uninstall --zap --cask revai-ai/tap/unalyze-connect-staging
-curl --proto '=https' --tlsv1.2 -fsSL https://unalyze-web.vercel.app/connect/install.sh | sh -s -- --uninstall
+while security delete-generic-password -s com.un-alyze.connect.staging >/dev/null 2>&1; do :; done
 ```
 
 A Mac still listed under Connected devices in Unalyze (Settings → Connect) can be revoked there.
