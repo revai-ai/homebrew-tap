@@ -1,6 +1,6 @@
 cask "unalyze-connect-staging" do
-  version "0.1.9"
-  sha256 "e149a65cfc320124ef4c8a160c84bc8bb5e76ef782b78d33d3e4a1713780c0e0"
+  version "0.1.10"
+  sha256 "b5a73b82d4719f86e28efbf1f8a7543524ab9fa772c994aba307e80dcfaf90c3"
 
   url "https://connect.base.un-alyze.com/staging/#{version}/unalyze-connect-#{version}-macos-aarch64.app.zip"
   name "Unalyze Connect (staging)"
