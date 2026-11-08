@@ -1,6 +1,6 @@
 cask "unalyze-connect" do
-  version "0.1.26"
-  sha256 "95e560e0678c0dbd52f9b88a390747a64b40692978a1190036c1788598517f4f"
+  version "0.1.27"
+  sha256 "45097800cd45de32747d286d72475bd7509248e0af6e9deb91ab949ab0a7b72c"
 
   url "https://connect.base.un-alyze.com/production/#{version}/unalyze-connect-#{version}-macos-aarch64.app.zip"
   name "Unalyze Connect"
