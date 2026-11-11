@@ -1,6 +1,6 @@
 cask "unalyze-connect-staging" do
-  version "0.1.28"
-  sha256 "d3c92c5065404885aa1d871552a5ef79478286acbe76c6fa06d95245577b1bbe"
+  version "0.1.29"
+  sha256 "1be8daad53f29c4180dad1d0ae426d23f00a42c75d563f518334190744944880"
 
   url "https://connect.base.un-alyze.com/staging/#{version}/unalyze-connect-#{version}-macos-aarch64.app.zip"
   name "Unalyze Connect (staging)"
@@ -15,8 +15,7 @@ cask "unalyze-connect-staging" do
   end
 
   auto_updates true
-  depends_on arch: :arm64
-  depends_on macos: :sonoma
+  depends_on macos: :monterey
 
   app "Unalyze Connect (staging).app"
 
