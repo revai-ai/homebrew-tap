@@ -1,6 +1,6 @@
 cask "unalyze-connect" do
-  version "0.1.28"
-  sha256 "db17b9b9635c867247af5a93b68c51910f686bb4cba7291d7ba1ade5738ec80b"
+  version "0.1.29"
+  sha256 "2175931cfcf0c19049a8d527f0d7fceac708a80f033e57bf22438b0cb5255034"
 
   url "https://connect.base.un-alyze.com/production/#{version}/unalyze-connect-#{version}-macos-aarch64.app.zip"
   name "Unalyze Connect"
@@ -15,8 +15,7 @@ cask "unalyze-connect" do
   end
 
   auto_updates true
-  depends_on arch: :arm64
-  depends_on macos: :sonoma
+  depends_on macos: :monterey
 
   app "Unalyze Connect.app"
 
